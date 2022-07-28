@@ -5,10 +5,9 @@ headers = {
     'User-Agent': 'Dalvik/2.1.0 (Linux; U; Android 9; MI 6 MIUI/20.6.18)'
 }
  
-user = ''
-password = ''
-# step = ''
-step = str(randint(10121, 12302))
+user = os.environ['USER_PHONE']
+password = os.environ['USER_PWD']
+step = os.environ['STEP']
  
 def get_code(location):
     code_pattern = re.compile("(?<=access=).*?(?=&)")
